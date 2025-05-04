@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    --primary-text-color: #181820;
+    --secondary-text-color: #5c5c62;
+    --durability-text-color: #6a737d9c;
+    --icon-color: #6a737d;
+    --border-color: #0026ff50;
+    --text-decoration-color: #003cff;
+    --box-shadow-color: #8ba9f1b6;
+
+    background-color: #ffffff;
+}
+
+.darkmode {
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #bebebe;
+    --durability-text-color: #aeafb19c;
+    --icon-color: #c0cfdf;
+    --box-shadow-color: #8ba9f1b6;
+
+    background-color: #000000;
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--box-shadow-color);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#theme-switch path {
+    fill: var(--durability-text-color)
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 900px;
+}
+
+.fh {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.fv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.resume {
+    margin: 50px auto;
+    border: 1px solid var(--box-shadow-color);
+    box-shadow: 1px 1px 7px 7px var(--box-shadow-color);
+    padding: 30px 0;
+    max-width: 900px;
+}
+
+.resume__block {
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 576px) {
+    .main-info,
+    .contact_info_container {
+        flex-direction: column;
+    }
+
+    .contact_info_container {
+        align-items: center;
+    }
+
+    .contact_info__block:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .experiences {
+        margin-right: 0;
+    }
+}
+
+.contact-info__header,
+.contact-info__sub-header {
+    text-align: center;
+}
+
+.contact-info__header {
+    color: var(--primary-text-color);
+    margin-bottom: 15px;
+    text-decoration-color: var(--text-decoration-color);
+    text-decoration-line: underline;
+}
+
+.contact-info__sub-header {
+    color: var(--secondary-text-color);
+    margin-bottom: 30px;
+}
+
+.contact-info__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact-info__block--center {
+    justify-content: center;
+}
+
+.contact-info__item {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+}
+
+.contact-info__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.contact-info__item-icon-wrapper {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info__item-icon path {
+    fill: var(--icon-color);
+}
+
+.contact-info__item-icon {
+    vertical-align: text-bottom;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-info__avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid;
+    border-color: var(--text-decoration-color);
+}
+
+.intro {
+    display: flex;
+    justify-content: start;
+}
+
+.intro__icon-wrapper {
+    margin-right: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.intro__icon {
+    height: 1.1428rem;
+    vertical-align: text-bottom;
+}
+
+.intro__icon path {
+    fill: var(--text-decoration-color);
+}
+
+.intro_text {
+    color: var(--secondary-text-color);
+    text-align: justify;
+}
+
+.skills__header {
+    color: var(--secondary-text-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.skills__text {
+    color: var(--secondary-text-color);
+    text-align: justify;
+}
+
+.skills__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 30px 0;
+}
+
+.skills__image {
+    height: 70px;
+    width: 70px;
+}
+
+.skills__list {
+    color: var(--secondary-text-color);
+    margin-left: 30px;
+}
+
+.experiences {
+    flex: 1 1 60%;
+    margin-right: 50px;
+}
+
+.experiences__header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.experiences__personal-project {
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+
+.experiences__personal-project-name {
+    color: var(--primary-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.experiences__personal-project-responsibilities {
+    color: var(--secondary-text-color);
+    padding-left: 20px;
+}
+
+.additional-info {
+    flex: 1 1 40%;
+}
+
+.additional-info__education {
+    margin-bottom: 20px;
+}
+
+.additional-info__education-header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.additional-info__education-university-durability {
+    color: var(--durability-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.additional-info__education-university-speciality {
+    color: var(--primary-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.additional-info__education-university-name {
+    color: var(--secondary-text-color);
+}
+
+.additional-info__languages {
+    margin-bottom: 20px;
+}
+
+.additional-info__languages-header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.additional-info__languages-item {
+    color: var(--secondary-text-color);
+}
