@@ -16,17 +16,17 @@ body {
     --text-decoration-color: #003cff;
     --box-shadow-color: #8ba9f1b6;
 
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .darkmode {
-    --primary-text-color: #ffffff;
+    --primary-text-color: #fff;
     --secondary-text-color: #bebebe;
     --durability-text-color: #aeafb19c;
     --icon-color: #c0cfdf;
     --box-shadow-color: #8ba9f1b6;
 
-    background-color: #000000;
+    background-color: #000;
 }
 
 #theme-switch {
@@ -93,7 +93,7 @@ body {
     margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (width <= 576px) {
     .main-info,
     .contact_info_container {
         flex-direction: column;
